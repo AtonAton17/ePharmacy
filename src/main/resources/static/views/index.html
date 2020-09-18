@@ -1,42 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" dir="ltr" ng-app>
+  <head>
+    <meta charset="utf-8">
     <title>E-Pharmacy</title>
-
-    <!--Bootstrap CDN-->
-    <link rel="stylesheet" href="..\css\app\bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <!--Custom CSS-->
-    <link rel="stylesheet" href="..\css\app\app.css">
-    <!--JQuery and JS-->
-    <script src="..\js\app\bootstrap.min.js"></script>
-    <script src="..\js\app\jquery.min.js"></script>
-</head>
-<body>
-    <div class="wrapper fadeInDown">
-        <div id="formContent">
-          <!-- Tabs Titles -->
-      
-          <!-- Icon -->
-          <div class="fadeIn first">
-            <img src="..\images\logo.png" id="icon" alt="Icon" />
+    <link rel="stylesheet" href="..\css\app\custom.css">
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <img src="..\images\logo.png" id="icon" alt="Icon" style="height:40px; width: 40px; left-padding: 10px; right-padding:10px;"/>
+      <a class="navbar-brand" href="#">E-Pharmacy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Logout</button>
+        </form>
+      </div>
+    </nav>
+    <div class="full-height">
+      <!--SIDE PANEL DIV-->
+      <div class="row" style="background-color: #F0F0F0; height: 100%;">
+        <div class="col-2">
+          <div class="row shadow-lg p-3 mb-5 bg-white rounded full-height">
+            <div class="col-12" id="nav-user-panel">
+              <span><img src="..\images\user.png" style="height:60px; width:60px; padding: 10px;"/></span>
+              <h5>Aton Layno M.D.</h5>
+              <p></p>
+            </div>
+            <div class="col-12" id="side-panel-menu">
+              <ul class="nav flex-column" style="padding-top: 0">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Patients</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Prescribers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Drugs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sig Code</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Drugs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
           </div>
-      
-          <!-- Login Form -->
-          <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
-          </form>
-      
-          <!-- Remind Passowrd -->
-          <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+        <div class="col-1">
+        </div>
+        <!--DIV para sa views-->
+        <div class="col-8" id="div-view">
+          <div class="card">
+            <div class="card-header">
+              Patients
+            </div>
+            <div class="card-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <form class="form-inline my-2 my-lg-0">
+                      <span><img src="..\images\search.png" style="height:60px; width:60px; padding: 10px;"/></span>
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                  <div class="col-12">
+                    <hr/>
+                  </div>
+                  <div class="col-12">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cris Chua
+                        <span class="float-right">
+                          <button type="button" class="btn btn-info">View</button>
+                        </span>
+                      </li>
+                      <li class="list-group-item">Jake Literado</li>
+                      <li class="list-group-item">Nica Rosal</li>
+                      <li class="list-group-item">Clark Zaldevar</li>
+                      <li class="list-group-item">Alex Borais</li>
+                      <li class="list-group-item">Tonette Lagan</li>
+                      <li class="list-group-item">Lorence Pangan</li>
+                      <li class="list-group-item">Gio Villarama</li>
+                      <li class="list-group-item">Sheng Solayao</li>
+                    </ul>
+                  </div>
+                  <div class="col-12">
+                    <hr/>
+                  </div>
+                  <div class="col-12">
+                      <p style="text-align: center;">dito yung pagination</p>
+                      <p style="text-align: center;">1 2 3 4 5 6 >></p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-      
+        </div>
+        <div class="col-1">
         </div>
       </div>
-</body>
+    </div>
+  </body>
 </html>

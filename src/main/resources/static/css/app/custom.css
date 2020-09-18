@@ -1,0 +1,28 @@
+#nav-user-panel{
+  padding: 30px, 30px, 30px, 30px;
+  border-bottom: 1px solid #000;
+  height: 20%;
+}
+
+#side-panel-menu{
+  height: 80%;
+}
+
+#div-view{
+  padding-top: 50px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.full-height {
+  height: 100%;
+}

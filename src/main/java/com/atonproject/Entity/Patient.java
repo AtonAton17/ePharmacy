@@ -15,7 +15,6 @@ public class Patient {
     private String firstName;
     private String lastName;
     private String gender;
-    private String age;
     private Date birthdate;
     private String nationality;
     private String mobileNumber;
@@ -38,13 +37,12 @@ public class Patient {
     private String ethnicity;
     private String[] medicalHistory;
 
-    public Patient(String id, Boolean active, String firstName, String lastName, String gender, String age, Date birthdate, String nationality, String mobileNumber, String homeNumber, String workNumber, String email, String address, String city, String state, String country, String zipCode, Double height, Double weight, String eyeColor, String hairColor, String ethnicity, String[] medicalHistory) {
+    public Patient(String id, Boolean active, String firstName, String lastName, String gender, Date birthdate, String nationality, String mobileNumber, String homeNumber, String workNumber, String email, String address, String city, String state, String country, String zipCode, Double height, Double weight, String eyeColor, String hairColor, String ethnicity, String[] medicalHistory) {
         this.id = id;
         this.active = active;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
-        this.age = age;
         this.birthdate = birthdate;
         this.nationality = nationality;
         this.mobileNumber = mobileNumber;
@@ -102,14 +100,6 @@ public class Patient {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
     }
 
     public Date getBirthdate() {
@@ -256,7 +246,6 @@ public class Patient {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", gender='" + gender + '\'' +
-                ", age='" + age + '\'' +
                 ", birthdate=" + birthdate +
                 ", nationality='" + nationality + '\'' +
                 ", mobileNumber='" + mobileNumber + '\'' +
